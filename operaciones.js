@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const registrar = (nombre, edad, especie, color, enfermedad) => {
+const registrar = (nombre, edad, animal, color, enfermedad) => {
   fs.readFile("./citas.json", "utf8", (err, data) => {
     if (err) {
       console.error("Error al leer archivo: ", err);
@@ -12,7 +12,7 @@ const registrar = (nombre, edad, especie, color, enfermedad) => {
     const nuevaCita = {
       nombre,
       edad,
-      especie,
+      animal,
       color,
       enfermedad,
     };
